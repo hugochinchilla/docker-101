@@ -1173,3 +1173,11 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+#author {
+	text-align: left;
+}
+#author ul {
+	list-style: none;
+	margin-left: 0;
+}
