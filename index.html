@@ -58,40 +58,42 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<h2>Containers</h2>
-					<p class="fragment">5 key facts</p>
-				</section>
+					<section>
+						<h2>Containers</h2>
+						<p class="fragment">5 key facts</p>
+					</section>
 
-				<section>
-					<h2>Isolation</h2>
-				</section>
+					<section>
+						<h2>Isolation</h2>
+					</section>
 
-				<section>
-					<h2>Reproducible</h2>
-				</section>
+					<section>
+						<h2>Reproducible</h2>
+					</section>
 
-				<section>
-					<h2>Run everywhere</h2>
-				</section>
+					<section>
+						<h2>Run everywhere</h2>
+					</section>
 
-				<section>
-					<h2>Self-contained</h2>
-				</section>
+					<section>
+						<h2>Self-contained</h2>
+					</section>
 
-				<section>
-					<h2>Version controlled</h2>
+					<section>
+						<h2>Version controlled</h2>
+					</section>
 				</section>
 
 				<section>
 					<h2>What Docker really is?</h2>
 					<ul>
 						<li class="fragment">Image manager</li>
-						<li class="fragment">Image runner</li>
-						<li class="fragment">
-							Containers are nothing new
-							<span class="fragment">, the way we do it with docker is</span>
-						</li>
+						<li class="fragment">Image executor</li>
 					</ul>
+					<p class="fragment">
+						Containers are nothing new
+						<span class="fragment">, the way we use them with docker is.</span>
+					</p>
 				</section>
 
 				<section>
@@ -108,20 +110,81 @@
 				</section>
 
 				<section>
-					<h2>Dockerfile</h2>
+					<h2>Docker in action</h2>
+				</section>
+
+				<section>
+					<h2>The Dockerfile</h2>
 					<pre><code data-trim contenteditable>
 FROM debian:jessie
 RUN apt-get update
 RUN apt-get install -y fortune
 CMD ["fortune"]
 					</code></pre>
+
+					<code class="fragment">docker build -t fortune .</code>
+				</section>
+
+				<section>
+					<h2>Projects with dependencies</h2>
+					<h1 class="fragment">Docker compose</h1>
+				</section>
+
+				<section>
+					<section>
+						<pre><code data-trim contenteditable>
+web:
+  image: hchinchilla/django-example
+  ports:
+   - 8080:8080
+  volumes:
+   - .:/code
+  links:
+   - db
+
+db:
+  image: mariadb:latest
+  ports:
+   - 3306
+  environment:
+    MYSQL_ROOT_PASSWORD: super-secret
+    MYSQL_DATABASE: project_example
+    MYSQL_USER: project_example
+    MYSQL_PASSWORD: qwerty
+  volumes:
+    - .data/db:/var/lib/mysql
+						</code></pre>
+					</section>
+
+					<section>
+						<pre><code data-trim contenteditable>
+FROM python:2
+WORKDIR /code/
+
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+
+EXPOSE 8080
+USER root
+
+ENTRYPOINT ["gunicorn"]
+
+# The --workers param comes with the WEB_CONCURRENCY env_vars
+CMD ["django_example.wsgi", "-b", "0.0.0.0:8080", "--log-file=-"]
+
+ENV DJANGO_SETTINGS_MODULE django_example.settings
+
+# let for the very end, so everything is cached between releases
+ADD . /code/
+					</code></pre>
+					</section>
 				</section>
 
 				<section style="text-align: left;">
 					<h1>THE END</h1>
 					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+						- <a href="http://twitter.com/ganon">@ganon</a><br>
+						- <a href="https://github.com/hugochinchilla/docker-101">github.com/hugochinchilla/docker-101</a>
 					</p>
 				</section>
 			</div>
