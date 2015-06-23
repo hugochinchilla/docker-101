@@ -1,4 +1,4 @@
-FROM python:3.4
+FROM python:2
 WORKDIR /code/
 
 ADD requirements.txt /code/
@@ -10,7 +10,9 @@ USER root
 ENTRYPOINT ["gunicorn"]
 
 # The --workers param comes with the WEB_CONCURRENCY env_vars
-CMD ["webpro.wsgi", "-b", "0.0.0.0:8080", "--log-file=-"]
+CMD ["django_example.wsgi", "-b", "0.0.0.0:8080", "--log-file=-"]
+
+ENV DJANGO_SETTINGS_MODULE django_example.settings
 
 # let for the very end, so everything is cached between releases
 ADD . /code/

@@ -1,11 +1,13 @@
-web:
-  build: .
+web: &base
+  image: hchinchilla/django-example
   ports:
    - 8080:8080
   volumes:
    - .:/code
   links:
    - db
+  command: ["django_example.wsgi:application", "-b", "0.0.0.0:8080", "--log-file=-", "--log-level=debug", "--reload"]
+
 db:
   image: mariadb:latest
   ports:
@@ -17,3 +19,9 @@ db:
     MYSQL_PASSWORD: qwerty
   volumes:
     - .data/db:/var/lib/mysql
+
+## development utils
+manage:
+  <<: *base
+  entrypoint: ["python", "manage.py"]
+  command: "help"
