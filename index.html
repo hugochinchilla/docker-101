@@ -40,117 +40,81 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Docker 101</h1>
-					<h3>De desarrollo a producción</h3>
+				<section class="full-height" data-background="/img/docker-wallpaper.jpg">
+					<h3 style="position: absolute; bottom: 10%; width: 100%; color: rgb(57, 77, 84); text-transform: lowercase">from development to production</h3>
 				</section>
 
-				<section data-background="/img/me.jpg">
+				<section class="full-height" data-background="/img/me.jpg">
 					<div id="author">
-					<h2>Hugo Chinchilla</h2>
-					<ul>
-						<li>Full stack developer</li>
-						<li>DevOps</li>
-						<li>Docker lover</li>
-						<li>Diver</li>
-					</ul>
+						<h2>Hugo Chinchilla</h2>
+						<ul>
+							<li>Full stack developer</li>
+							<li>DevOps</li>
+							<li class="fragment">Docker lover</li>
+							<li class="fragment">Diver</li>
+						</ul>
 					</div>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<h2>Contenedores</h2>
+					<h2>Containers</h2>
+					<p class="fragment">5 key facts</p>
+				</section>
+
+				<section>
+					<h2>Isolation</h2>
+				</section>
+
+				<section>
+					<h2>Reproducible</h2>
+				</section>
+
+				<section>
+					<h2>Run everywhere</h2>
+				</section>
+
+				<section>
+					<h2>Self-contained</h2>
+				</section>
+
+				<section>
+					<h2>Version controlled</h2>
+				</section>
+
+				<section>
+					<h2>What Docker really is?</h2>
 					<ul>
-						<li>Aislamiento</li>
-						<li>Reproducibles</li>
-						<li>Ejecuta en cualquier sitio</li>
-						<li>Autocontenidos</li>
+						<li class="fragment">Image manager</li>
+						<li class="fragment">Image runner</li>
+						<li class="fragment">
+							Containers are nothing new
+							<span class="fragment">, the way we do it with docker is</span>
+						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Docker</h2>
-					<ul>
-						<li>Gestor de imágenes</li>
-						<li>Ejecutar imágenes</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>I'ts showtime!!</h2>
+					<h2>Why docker</h2>
 				</section>
 
-				<section>
-					<h2>12 Factor</h2>
-					<ul>
-						<li>II. Explicitly declare and isolate dependencies</li>
-						<li>III. Store config in the environment</li>
-						<li>IV. Strictly separate build and run stages</li>
-						<li>VI. Execute the app as one or more stateless processes</li>
-						<li>VII. Export services via port binding</li>
-						<li>IX. Maximize robustness with fast startup and graceful shutdown</li>
-
-					</ul>
+				<section
+					class="full-height"
+					style="text-align: left;"
+					data-background="/img/clockworker.jpg"
+				>
+					<p style="position: absolute; bottom: 10%; background: rgba(0,0,0,0.6); padding: 30px;">
+						Because of developer obsessession about clean and minimal environments to run their software</p>
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
+					<h2>Dockerfile</h2>
 					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install -y fortune
+CMD ["fortune"]
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
 				</section>
 
 				<section style="text-align: left;">
@@ -160,9 +124,7 @@ function linkify( selector ) {
 						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
 					</p>
 				</section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>

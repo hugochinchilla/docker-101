@@ -1177,7 +1177,15 @@ body {
 #author {
 	text-align: left;
 }
+#author h2, #author li {
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.6) !important;
+}
 #author ul {
 	list-style: none;
 	margin-left: 0;
+}
+
+
+section.full-height {
+  height: 100%;
 }
