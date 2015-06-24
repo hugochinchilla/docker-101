@@ -12,21 +12,25 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+env_file = os.path.realpath(os.path.join(BASE_DIR, '.env'))
+dotenv.read_dotenv(env_file)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ait)45m_5+cp5-a$1opc08s#ztxfl3zb)=qe8@%-(zg85@pkq^'
+SECRET_KEY = os.getenv("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', "False") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -79,11 +83,11 @@ WSGI_APPLICATION = 'django_example.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ['DB_ENV_MYSQL_DATABASE'],
-        'USER': os.environ['DB_ENV_MYSQL_USER'],
-        'PASSWORD': os.environ['DB_ENV_MYSQL_PASSWORD'],
-        'HOST': os.environ['DB_PORT_3306_TCP_ADDR'],
-        'PORT': os.environ['DB_PORT_3306_TCP_PORT'],
+        'NAME':     os.environ['MYSQL_DATABASE'],
+        'USER':     os.environ['MYSQL_USER'],
+        'PASSWORD': os.environ['MYSQL_PASSWORD'],
+        'HOST':     os.environ['MYSQL_HOST'],
+        'PORT':     os.environ['MYSQL_PORT'],
     }
 }
 
@@ -93,7 +97,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = os.getenv('TZ', 'UTC')
 
 USE_I18N = True
 
@@ -107,5 +111,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-
-#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="29cm"
+   height="20cm"
+   viewBox="67 159 567 391"
+   id="svg2">
+  <metadata
+     id="metadata170">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs168" />
+  <g
+     id="g4">
+    <rect
+       width="122.598"
+       height="45.625801"
+       x="68.700996"
+       y="214.188"
+       id="rect6"
+       style="fill:#ffffff" />
+    <rect
+       width="122.598"
+       height="45.625801"
+       x="68.700996"
+       y="214.188"
+       id="rect8"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="130"
+       y="242.51199"
+       id="text10"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="130"
+         y="242.51199"
+         id="tspan12">Container</tspan>
+    </text>
+  </g>
+  <g
+     id="g14">
+    <rect
+       width="166.94901"
+       height="45.625801"
+       x="222.052"
+       y="213.938"
+       id="rect16"
+       style="fill:#ffffff" />
+    <rect
+       width="166.94901"
+       height="45.625801"
+       x="222.052"
+       y="213.938"
+       id="rect18"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="305.526"
+       y="242.26199"
+       id="text20"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="305.526"
+         y="242.26199"
+         id="tspan22">Image</tspan>
+    </text>
+  </g>
+  <g
+     id="g24">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="130,214.188 130,192.414 263.789,192.414 263.789,203.03 "
+       id="polyline26" />
+    <polygon
+       points="258.789,200.53 263.789,203.03 268.789,200.53 263.789,210.53 "
+       id="polygon28"
+       style="fill:#000000" />
+    <polygon
+       points="258.789,200.53 263.789,203.03 268.789,200.53 263.789,210.53 "
+       id="polygon30"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="133"
+     y="185"
+     id="text32"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="133"
+       y="185"
+       id="tspan34">docker commit</tspan>
+  </text>
+  <g
+     id="g36">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="263.789,259.564 263.789,281.338 130,281.338 130,270.722 "
+       id="polyline38" />
+    <polygon
+       points="135,273.222 130,270.722 125,273.222 130,263.222 "
+       id="polygon40"
+       style="fill:#000000" />
+    <polygon
+       points="135,273.222 130,270.722 125,273.222 130,263.222 "
+       id="polygon42"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="140"
+     y="300"
+     id="text44"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="140"
+       y="300"
+       id="tspan46">docker run</tspan>
+  </text>
+  <g
+     id="g48">
+    <rect
+       width="131.963"
+       height="45.625801"
+       x="73.718597"
+       y="398.68799"
+       id="rect50"
+       style="fill:#ffffff" />
+    <rect
+       width="131.963"
+       height="45.625801"
+       x="73.718597"
+       y="398.68799"
+       id="rect52"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="139.7"
+       y="427.01199"
+       id="text54"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="139.7"
+         y="427.01199"
+         id="tspan56">Docker file</tspan>
+    </text>
+  </g>
+  <g
+     id="g58">
+    <rect
+       width="128.16299"
+       height="45.625801"
+       x="407.61801"
+       y="398.68799"
+       id="rect60"
+       style="fill:#ffffff" />
+    <rect
+       width="128.16299"
+       height="45.625801"
+       x="407.61801"
+       y="398.68799"
+       id="rect62"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="471.69901"
+       y="427.01199"
+       id="text64"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="471.69901"
+         y="427.01199"
+         id="tspan66">Docker dir</tspan>
+    </text>
+  </g>
+  <g
+     id="g68">
+    <rect
+       width="168.28101"
+       height="68.203598"
+       x="463.71799"
+       y="205.39799"
+       id="rect70"
+       style="fill:#ffffff" />
+    <rect
+       width="168.28101"
+       height="68.203598"
+       x="463.71799"
+       y="205.39799"
+       id="rect72"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="547.85901"
+       y="233.722"
+       id="text74"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="547.85901"
+         y="233.722"
+         id="tspan76">Docker</tspan>
+      <tspan
+         x="547.85901"
+         y="256.29999"
+         id="tspan78">Repository</tspan>
+    </text>
+  </g>
+  <g
+     id="g80">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="547.859,273.602 547.859,295.126 347.264,295.126 347.264,270.472 "
+       id="polyline82" />
+    <polygon
+       points="352.264,272.972 347.264,270.472 342.264,272.972 347.264,262.972 "
+       id="polygon84"
+       style="fill:#000000" />
+    <polygon
+       points="352.264,272.972 347.264,270.472 342.264,272.972 347.264,262.972 "
+       id="polygon86"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="367"
+     y="291"
+     id="text88"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="367"
+       y="291"
+       id="tspan90">docker pull</tspan>
+  </text>
+  <g
+     id="g92">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="347.262,213.938 347.262,181 550,181 550,192.092 "
+       id="polyline94" />
+    <polygon
+       points="545,189.592 550,192.092 555,189.592 550,199.592 "
+       id="polygon96"
+       style="fill:#000000" />
+    <polygon
+       points="545,189.592 550,192.092 555,189.592 550,199.592 "
+       id="polygon98"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="402"
+     y="174"
+     id="text100"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="402"
+       y="174"
+       id="tspan102">docker push</tspan>
+  </text>
+  <g
+     id="g104">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       x1="205.68201"
+       y1="421.5"
+       x2="396.70999"
+       y2="421.5"
+       id="line106" />
+    <polygon
+       points="394.21,426.5 396.71,421.5 394.21,416.5 404.21,421.5 "
+       id="polygon108"
+       style="fill:#000000" />
+    <polygon
+       points="394.21,426.5 396.71,421.5 394.21,416.5 404.21,421.5 "
+       id="polygon110"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="231"
+     y="416"
+     id="text112"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="231"
+       y="416"
+       id="tspan114">contained in</tspan>
+  </text>
+  <g
+     id="g116">
+    <rect
+       width="133.149"
+       height="45.625801"
+       x="236.476"
+       y="457.43799"
+       id="rect118"
+       style="fill:#ffffff" />
+    <rect
+       width="133.149"
+       height="45.625801"
+       x="236.476"
+       y="457.43799"
+       id="rect120"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+    <text
+       x="303.05099"
+       y="485.76199"
+       id="text122"
+       style="font-size:18.06220055px;font-style:normal;font-weight:700;text-anchor:middle;fill:#000000;font-family:sans-serif">
+      <tspan
+         x="303.05099"
+         y="485.76199"
+         id="tspan124">Text editor</tspan>
+    </text>
+  </g>
+  <g
+     id="g126">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="236.476,480.25 172.691,480.25 172.691,455.22 "
+       id="polyline128" />
+    <polygon
+       points="177.691,457.72 172.691,455.22 167.691,457.72 172.691,447.72 "
+       id="polygon130"
+       style="fill:#000000" />
+    <polygon
+       points="177.691,457.72 172.691,455.22 167.691,457.72 172.691,447.72 "
+       id="polygon132"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="185"
+     y="475"
+     id="text134"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="185"
+       y="475"
+       id="tspan136">edits</tspan>
+  </text>
+  <g
+     id="g138">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="503.74,398.688 503.74,339 305.526,339 305.526,270.47 "
+       id="polyline140" />
+    <polygon
+       points="310.526,272.97 305.526,270.47 300.526,272.97 305.526,262.97 "
+       id="polygon142"
+       style="fill:#000000" />
+    <polygon
+       points="310.526,272.97 305.526,270.47 300.526,272.97 305.526,262.97 "
+       id="polygon144"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="337"
+     y="358"
+     id="text146"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="337"
+       y="358"
+       id="tspan148">docker build</tspan>
+  </text>
+  <text
+     x="394"
+     y="517"
+     id="text150"
+     style="font-size:15.80440044px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:Liberation Sans Narrow">
+    <tspan
+       x="394"
+       y="517"
+       id="tspan152">Copyright (C) 2014 by Steve Litt</tspan>
+  </text>
+  <g
+     id="g154">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:3.0480001"
+       points="589.93,273.602 589.93,527 139.7,527 139.7,455.22 "
+       id="polyline156" />
+    <polygon
+       points="144.7,457.72 139.7,455.22 134.7,457.72 139.7,447.72 "
+       id="polygon158"
+       style="fill:#000000" />
+    <polygon
+       points="144.7,457.72 139.7,455.22 134.7,457.72 139.7,447.72 "
+       id="polygon160"
+       style="fill:none;stroke:#000000;stroke-width:3.0480001" />
+  </g>
+  <text
+     x="161"
+     y="546"
+     id="text162"
+     style="font-size:15.80440044px;font-style:normal;font-weight:700;text-anchor:start;fill:#000000;font-family:sans-serif">
+    <tspan
+       x="161"
+       y="546"
+       id="tspan164">imported by Dockerfile &quot;from&quot; statement</tspan>
+  </text>
+</svg>

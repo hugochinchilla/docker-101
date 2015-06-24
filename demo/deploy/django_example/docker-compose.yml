@@ -6,7 +6,9 @@ web: &base
    - .:/code
   links:
    - db
-  command: ["django_example.wsgi:application", "-b", "0.0.0.0:8080", "--log-file=-", "--log-level=debug", "--reload"]
+  environment:
+    MYSQL_WAIT_TIME: 0
+  command: ["gunicorn", "django_example.wsgi:application", "-b", "0.0.0.0:8080", "--log-file=-", "--log-level=debug", "--reload"]
 
 db:
   image: mariadb:latest
@@ -25,3 +27,13 @@ manage:
   <<: *base
   entrypoint: ["python", "manage.py"]
   command: "help"
+
+
+# deploy tools
+centurion:
+  image: habitissimo/centurion:latest
+  volumes:
+    - ".:/code"
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - "~/.dockercfg:/root/.dockercfg"
+    - "~/.docker:/root/.docker"

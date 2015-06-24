@@ -119,10 +119,48 @@
 FROM debian:jessie
 RUN apt-get update
 RUN apt-get install -y fortune
-CMD ["fortune"]
+CMD ["/usr/games/fortune"]
 					</code></pre>
 
 					<code class="fragment">docker build -t fortune .</code>
+				</section>
+
+				<section>
+					<h2>Running the container</h2>
+					<code>docker run fortune</code>
+				</section>
+
+				<section>
+					<section>
+						<h2>A slighltly more complex Dockerfile</h2>
+						<pre><code data-trim contenteditable>
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install -y ipython
+CMD ["ipython"]
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Why more complex</h2>
+						<p class="fragment">Ipython is interactive</p>
+						<p class="fragment">Let's try it</p>
+						<p class="fragment">
+							<code>docker run ipython</code>
+						</p>
+					</section>
+
+					<section>
+						<h2>What happened?</h2>
+						<p class="fragment">
+							If you need interaction you have to tell docker.</br>
+							<code>docker run -i -t ipython</code>
+						</p>
+						<p style="text-align: left">
+						 <span class="fragment">-i &nbsp;&nbsp;&nbsp; Keep STDIN open even if not attached</br></span>
+						 <span class="fragment">-t &nbsp;&nbsp;&nbsp; Allocate a pseudo-TTY</span>
+						</p>
+					</section>
 				</section>
 
 				<section>
@@ -177,6 +215,62 @@ ENV DJANGO_SETTINGS_MODULE django_example.settings
 # let for the very end, so everything is cached between releases
 ADD . /code/
 					</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Deploying to production</h2>
+				</section>
+
+				<section>
+					<section>
+						<h1>Centurion</h1>
+						<img src="/img/centurion.jpg" height="400"/>
+					</section>
+
+					<section>
+						<p><code>centurion -p app -e staging -a deploy</code></p>
+					</section>
+
+					<section>
+						<h3>Configuration</h3>
+						<pre><code data-trim contenteditable>
+namespace :environment do
+  task :common do
+    set :image, 'hchinchilla/django_example'
+    set :restart_policy_name, "always"
+
+    env_vars MYSQL_HOST: "%DOCKER_HOST_IP%"
+    env_vars MYSQL_PORT: "203306"
+    env_vars MYSQL_USER: "example"
+    env_vars MYSQL_PASSWORD: "super_secret"
+    env_vars TZ: "Europe/Madrid"
+  end
+
+  desc 'Staging environment'
+  task :staging => :common do
+    set_current_environment(:staging)
+
+    env_vars SECRET_KEY: "vbr3z&zd4xe&h5)53"
+    env_vars DEBUG: "False"
+
+    host '127.0.0.1:2375'
+    host_port 10080, container_port: 8080
+  end
+
+  desc 'Production environment'
+  task :production => :common do
+    set_current_environment(:production)
+
+    env_vars SECRET_KEY: "faoc3@+%a&$^kk**y9"
+    env_vars DEBUG: "False"
+    env_vars WEB_CONCURRENCY: "10"
+
+    host '188.166.94.235:2375'
+    host_port 10080, container_port: 8080
+  end
+end
+						</code></pre>
 					</section>
 				</section>
 
