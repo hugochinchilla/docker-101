@@ -7,27 +7,24 @@ web: &base
   links:
    - db
   environment:
-    MYSQL_WAIT_TIME: 0
+    DB_WAIT_TIME: 2
   command: ["gunicorn", "django_example.wsgi:application", "-b", "0.0.0.0:8080", "--log-file=-", "--log-level=debug", "--reload"]
 
 db:
-  image: mariadb:latest
-  ports:
-   - 3306
+  image: postgres:9.4.1
   environment:
-    MYSQL_ROOT_PASSWORD: super-secret
-    MYSQL_DATABASE: project_example
-    MYSQL_USER: project_example
-    MYSQL_PASSWORD: qwerty
+    - "POSTGRES_USER=postgresql"
+    - "POSTGRES_PASSWORD=supersecret"
+  expose:
+    - "5432"
   volumes:
-    - .data/db:/var/lib/mysql
+    - "/opt/data/postgres:/var/lib/postgresql/data"
 
 ## development utils
 manage:
   <<: *base
   entrypoint: ["python", "manage.py"]
   command: "help"
-
 
 # deploy tools
 centurion:

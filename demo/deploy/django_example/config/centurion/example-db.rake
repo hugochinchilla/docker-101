@@ -1,15 +1,14 @@
 namespace :environment do
   task :common do
-    set :image, 'mariadb'
+    set :image, 'postgres'
+    set :tag, '9.4.1'
     set :restart_policy_name, "always"
 
-    env_vars MYSQL_USER: "example"
-    env_vars MYSQL_PASSWORD: "cjxo[p&^pdJjnqoEz&"
-    env_vars MYSQL_ROOT_PASSWORD: "uL8*Pn>EMmX9iA>$W"
-    env_vars MYSQL_DATABASE: "example"
+    env_vars POSTGRES_USER: "postgresql"
+    env_vars POSTGRES_PASSWORD: "supersecret"
 
-    host_port 23306, container_port: 3306
-    host_volume "/opt/example/mariadb", container_volume: "/var/lib/mysql"
+    host_port 25432, container_port: 5432
+    host_volume "/opt/example/postgres", container_volume: "/var/lib/postgresql/data"
   end
 
   desc 'Staging environment'

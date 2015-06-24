@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# wait for mysql to be fully started
-sleep $MYSQL_WAIT_TIME
+# wait for database to be fully started (only for development)
+sleep $DB_WAIT_TIME
 
 # execute all pending migrations
 python manage.py migrate

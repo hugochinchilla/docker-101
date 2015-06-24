@@ -8,6 +8,7 @@ EXPOSE 8080
 USER root
 
 ENV DJANGO_SETTINGS_MODULE django_example.settings
+ENV DB_WAIT_TIME 0
 
 ENTRYPOINT ["/code/start-app.sh"]
 CMD ["gunicorn", "django_example.wsgi", "-b", "0.0.0.0:8080", "--log-file=-"]
