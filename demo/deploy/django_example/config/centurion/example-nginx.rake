@@ -1,6 +1,6 @@
 namespace :environment do
   task :common do
-    set :image, ''
+    set :image, 'hchinchilla/nginx-django-example'
     set :restart_policy_name, "always"
 
     env_vars GUNICORN_PORT_8080_TCP_ADDR: "%DOCKER_HOST_IP%"
