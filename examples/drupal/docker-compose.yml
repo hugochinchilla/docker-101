@@ -1,0 +1,24 @@
+drupal:
+  image: drupal:latest
+  ports:
+    - "8000:80"
+  links:
+    - db:mysql
+  environment:
+    - "TZ=Europe/Madrid"
+    # required as indicated in the image docs (https://registry.hub.docker.com/_/drupal/)
+    - "MYSQL_USER=drupal"
+    - "MYSQL_PASSWORD=drupal"
+    - "MYSQL_NAME=drupal"
+
+db:
+  image: mysql:latest
+  volumes:
+    - "/opt/drupal/mysql:/var/lib/mysql"
+  environment:
+    - "TZ=Europe/Madrid"
+    # required as indicated in the image docs (https://registry.hub.docker.com/_/mysql/)
+    - "MYSQL_ROOT_PASSWORD=supersecret"
+    - "MYSQL_USER=drupal"
+    - "MYSQL_PASSWORD=drupal"
+    - "MYSQL_DATABASE=drupal"

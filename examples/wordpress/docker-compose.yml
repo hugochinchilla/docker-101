@@ -1,0 +1,24 @@
+wordpress:
+  image: wordpress:latest
+  ports:
+    - "80:80"
+  links:
+    - db:mysql
+  environment:
+    - "TZ=Europe/Madrid"
+    # required as indicated in the image docs (https://registry.hub.docker.com/_/wordpress/)
+    - "WORDPRESS_DB_USER=wordpress"
+    - "WORDPRESS_DB_PASSWORD=wordpress"
+    - "WORDPRESS_DB_NAME=wordpress"
+
+db:
+  image: mysql:latest
+  volumes:
+    - "/opt/wordpress/mysql:/var/lib/mysql"
+  environment:
+    - "TZ=Europe/Madrid"
+    # required as indicated in the image docs (https://registry.hub.docker.com/_/mysql/)
+    - "MYSQL_ROOT_PASSWORD=supersecret"
+    - "MYSQL_USER=wordpress"
+    - "MYSQL_PASSWORD=wordpress"
+    - "MYSQL_DATABASE=wordpress"
