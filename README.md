@@ -9,3 +9,7 @@ También siguiendo la linea de la presentación puedes usar este contenedor para
 ```
 docker run -d -p 9000:80 -v `pwd`:/www fnichol/uhttpd
 ```
+
+## Actualziado 2015-07-23
+
+Añadida la carpeta [examples!](examples) usada en la demo en la UIB
